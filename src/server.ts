@@ -12,7 +12,6 @@ import { errorHandler } from "./errorHandler.js";
 import { fillDb } from "./db/createDb/fillDb.js";
 import { createDb } from "./db/createTables.js";
 
-await createDb();
 await fillDb();
 
 const getDataController = GetDataController.getInstance();
