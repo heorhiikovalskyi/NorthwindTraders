@@ -29,7 +29,7 @@ export type Products = {
   UnitsInStock: string;
   UnitsOnOrder: string;
   ReorderLevel: string;
-  Discontinued: "0" | "1";
+  Discontinued: '0' | '1';
 }[];
 
 export type Customers = {

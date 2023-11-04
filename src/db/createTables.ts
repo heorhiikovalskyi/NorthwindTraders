@@ -1,5 +1,6 @@
-import { db } from "./db.js";
-import { sql } from "drizzle-orm";
+import { sql } from 'drizzle-orm';
+import { db } from './db';
+
 export const createDb = async () => {
   await db.execute(sql`CREATE TABLE categories (
     id int AUTO_INCREMENT PRIMARY KEY NOT NULL,

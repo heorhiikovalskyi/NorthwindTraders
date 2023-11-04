@@ -1,5 +1,5 @@
-import { db } from "../db.js";
-import { eq } from "drizzle-orm";
+import { eq } from 'drizzle-orm';
+import { db } from '../db';
 import {
   parseCategories,
   parseCustomers,
@@ -12,18 +12,18 @@ import {
   parseShippers,
   parseSuppliers,
   parseTerritories,
-} from "../../parseData/parseData.js";
-import { suppliers } from "../schema/suppliers.js";
-import { categories } from "../schema/categories.js";
-import { customers } from "../schema/customers.js";
-import { employees } from "../schema/employees.js";
-import { employeeTerritories } from "../schema/employeeTerritories.js";
-import { orderDetails } from "../schema/orderDetails.js";
-import { orders } from "../schema/orders.js";
-import { products } from "../schema/products.js";
-import { regions } from "../schema/regions.js";
-import { shippers } from "../schema/shippers.js";
-import { territories } from "../schema/territories.js";
+} from '../../parseData/parseData';
+import { suppliers } from '../schema/suppliers';
+import { categories } from '../schema/categories';
+import { customers } from '../schema/customers';
+import { employees } from '../schema/employees';
+import { employeeTerritories } from '../schema/employeeTerritories';
+import { orderDetails } from '../schema/orderDetails.js';
+import { orders } from '../schema/orders';
+import { products } from '../schema/products';
+import { regions } from '../schema/regions';
+import { shippers } from '../schema/shippers';
+import { territories } from '../schema/territories';
 
 export const fillDb = async () => {
   try {
@@ -58,7 +58,7 @@ export const fillDb = async () => {
       unitsInStock: Number(e.UnitsInStock),
       unitsOnOrder: Number(e.UnitsOnOrder),
       reorderLevel: Number(e.ReorderLevel),
-      discontinued: e.Discontinued === "1" ? true : false,
+      discontinued: e.Discontinued === '1',
     }));
 
     const customers_ = (await parseCustomers()).map((e) => ({

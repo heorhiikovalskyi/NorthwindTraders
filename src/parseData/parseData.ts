@@ -1,4 +1,4 @@
-import csv from "csvtojson";
+import csv from 'csvtojson';
 import {
   Categories,
   Customers,
@@ -11,9 +11,9 @@ import {
   Shippers,
   Suppliers,
   Territories,
-} from "./types";
+} from './types';
 
-const basePath = `./src/parseData/rawData`;
+const basePath = './src/parseData/rawData';
 
 export const parseCategories = () => (<unknown>csv().fromFile(`${basePath}/Categories.csv`)) as Promise<Categories>;
 
